@@ -1,0 +1,15 @@
+{
+  "name": "lxjs-browser-skeleton",
+  "version": "0.0.1",
+  "description": "LXJS Photo Uploader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andrerod",
+  "license": "MIT",
+  "dependencies": {
+    "openni-browser": "*",
+    "ecstatic": "*"
+  }
+}

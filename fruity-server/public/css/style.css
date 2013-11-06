@@ -1,0 +1,29 @@
+body {
+  color: #808080;
+  font-family:Monospace;
+  font-size:13px;
+  text-align:center;
+
+  background-color: #000;
+  margin: 0px;
+  overflow: hidden;
+}
+
+a {
+  color: #0080ff;
+}
+
+#container {
+  text-align: center;
+}
+
+#dash {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+}
+
+#score {
+  color: #FF0000;
+  font-size: 30px;
+}

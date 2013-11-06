@@ -1,0 +1,6 @@
+*.png
+.DS_Store
+node_modules
+samples
+credentials.json
+config.json
