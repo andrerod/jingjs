@@ -1,6 +1,4 @@
-function Game(opts) {
-  this.points = 0;
-
+function Game (opts) {
   this.width     = opts.width;
   this.height    = opts.height;
   this.container = opts.container;
@@ -28,32 +26,6 @@ function Game(opts) {
   mainLight.position.set(0, 0, 1);
   this.scene.add(mainLight);
 
-  // Create example spark
-  threexSparks  = new THREEx.Sparks({
-    maxParticles: 400,
-    counter: new SPARKS.SteadyCounter(300)
-  });
-
-  // setup the emitter
-  var emitter = threexSparks.emitter();
-
-  var initColorSize = function(){
-    this.initialize = function( emitter, particle ){
-      particle.target.color().setHSV(0.3, 0.9, 0.4);
-      particle.target.size(150);
-    };
-  };
-
-  emitter.addInitializer(new initColorSize());
-  emitter.addInitializer(new SPARKS.Position( new SPARKS.PointZone( new THREE.Vector3(0,0,0) ) ) );
-  emitter.addInitializer(new SPARKS.Lifetime(0,0.8));
-  emitter.addInitializer(new SPARKS.Velocity(new SPARKS.PointZone(new THREE.Vector3(0,250,00))));
-
-  emitter.addAction(new SPARKS.Age());
-  emitter.addAction(new SPARKS.Move());
-  emitter.addAction(new SPARKS.RandomDrift(1000,0,1000));
-  emitter.addAction(new SPARKS.Accelerate(0,-200,0));
-
   // create renderer
   this.renderer = new THREE.WebGLRenderer({ antialias: true });
   this.renderer.setSize(this.width, this.height);
@@ -76,27 +48,35 @@ function Game(opts) {
 
 Game.prototype = {
   initScene: function() {
-    this._initBackground();
-    this._initKinectController();
-    this._initFruits();
+    var self = this;
 
-    // To use enter the axis length
-    this.initDebugaxis(10000);
+    self._initBackground(function () {
+      self._initKinectController();
+      self._initFruits();
+
+      // To use enter the axis length
+      // self.initDebugaxis(10000);
+    });
   },
 
-  _initBackground: function() {
-    var texture = THREE.ImageUtils.loadTexture(
-      'images/background.jpg', THREE.UVMapping
-    );
-    var material = new THREE.MeshBasicMaterial({
-      color: 0xffffff, 
-      map: texture,
-    });
+  _initBackground: function(callback) {
+    var self = this;
 
-    var backgroundScale = 4.5;
-    var geometry = new THREE.PlaneGeometry(1920 * backgroundScale, 1080 * backgroundScale);
-    var mesh = new THREE.Mesh(geometry, material);
-    this.scene.add(mesh);
+    var texture = THREE.ImageUtils.loadTexture(
+      '/background', THREE.UVMapping, function () {
+
+      var material = new THREE.MeshBasicMaterial({
+        color: 0xffffff, 
+        map: texture,
+      });
+
+      var backgroundScale = 4.5;
+      var geometry = new THREE.PlaneGeometry(1920 * backgroundScale, 1080 * backgroundScale);
+      var mesh = new THREE.Mesh(geometry, material);
+      self.scene.add(mesh);
+
+      callback();
+    });
   },
 
   _initKinectController: function () {
@@ -389,8 +369,9 @@ Game.prototype = {
       self.scene.remove(fruit);
 
       if (user) {
-        self.points++;
-        $("#score").text(self.points);
+        var score = parseInt($("#score").text(), 10) + 1;
+        $.post('/update_username_score', { username: $('#username').val(), score: score });
+        $("#score").text(score);
       }
     }
   },

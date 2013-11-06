@@ -1,24 +1,29 @@
 <html lang="en">
 <head>
-  <title>Azure Capture</title>
+  <title>JingJS demo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
 
   <script type="text/javascript" src="./lib/openni.js"></script>
 
+  <script type="text/javascript" src="./lib/detector.js"></script>
   <script type="text/javascript" src="./lib/three.min.js"></script>
   <script type="text/javascript" src="./lib/stats.min.js"></script>
-
-  <script type="text/javascript" src="./lib/Detector.js"></script>
-  <script type="text/javascript" src="./lib/Spark.js"></script>
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="hidden-dialog" id="username-dialog" title="Login">
+    <div>Username: <input id="username" type="text"></input></div>
+  </div>
+
   <div id="dash">
-    <div id="score">0</div>
+    <div id="max_score_div">Maximum score: <span id="max_score">0</span></div>
+    <div id="score_div">Score:<span id="score">0</span></div>
   </div>
   <div id="container"></div>
   <script type="text/javascript" src="./src/game.js"></script>

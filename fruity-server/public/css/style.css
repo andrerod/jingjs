@@ -21,9 +21,15 @@ a {
   position: absolute;
   right: 10%;
   top: 5%;
+  text-align: right;
 }
 
 #score {
+  color: #FF0000;
+  font-size: 30px;
+}
+
+#max_score {
   color: #FF0000;
   font-size: 30px;
 }
