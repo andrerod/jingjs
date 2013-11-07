@@ -62,8 +62,9 @@ Game.prototype = {
   _initBackground: function(callback) {
     var self = this;
 
+    // TODO: background image
     var texture = THREE.ImageUtils.loadTexture(
-      '/background', THREE.UVMapping, function () {
+      '/images/background.jpg', THREE.UVMapping, function () {
 
       var material = new THREE.MeshBasicMaterial({
         color: 0xffffff, 
@@ -261,7 +262,6 @@ Game.prototype = {
         (Math.random() - 0.5) / 10
       );
 
-      // TODO: really not sure about this number ...
       var halfRadius = 100;
       mesh.intercepts = function (point) {
         var pos = this.position;

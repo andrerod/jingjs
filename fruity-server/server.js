@@ -18,14 +18,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/background', function (req, res) {
-  var blobService = azure.createBlobService();
-  blobService.listBlobs('azure', function (err, blobs) {
-    if (!err && blobs.length > 0) {
-      blobService.getBlob('azure', blobs[0].name).pipe(res);
-    } else {
-      res.status(404).send('Not found');
-    }
-  });
+  // TODO: implement
 });
 
 app.get('/get_username_score', function (req, res) {
@@ -47,22 +40,7 @@ app.post('/update_username_score', function (req, res) {
   var username = req.body.username;
   var score = req.body.score;
 
-  var tableService = azure.createTableService();
-  tableService.queryEntity ('users', 'user', username, function (err, user) {
-    if (!err && user && score > user.max_score) {
-      user.max_score = score;
-
-      tableService.updateEntity ('users', user, function () {
-        console.log('updating');
-        res.json({ max_score: score });
-      });
-    } else {
-      tableService.insertEntity ('users', { PartitionKey: 'user', RowKey: username, max_score: score }, function () {
-        console.log('inserted');
-        res.json({ max_score: score });
-      });
-    }
-  });
+  // TODO: update user score
 });
 
 if (!module.parent) {
