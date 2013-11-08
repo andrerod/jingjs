@@ -1,8 +1,0 @@
-Wed Nov 06 2013 20:56:35 GMT+0100 (CET):
-[Error: Local file azure doesn't exist]
-Error: Local file azure doesn't exist
-    at __$uploadAzureBlob (/Users/andrerod/.nvm/v0.10.13/lib/node_modules/azure-cli/lib/commands/storage.blob._js:657:26)
-    at ___ (/Users/andrerod/.nvm/v0.10.13/lib/node_modules/azure-cli/lib/commands/storage.blob._js:657:129)
-    at ___ (/Users/andrerod/.nvm/v0.10.13/lib/node_modules/azure-cli/node_modules/streamline/lib/callbacks/runtime.js:85:13)
-    at /Users/andrerod/.nvm/v0.10.13/lib/node_modules/azure-cli/lib/util/utils.js:624:37
-    at Object.cb [as oncomplete] (fs.js:168:19)

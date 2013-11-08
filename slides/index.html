@@ -1,0 +1,297 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Cloud.js</title>
+
+    <meta name="description" content="Introduction to Node.js" />
+    <meta name="author" content="Andre Rodrigues" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css" />
+    <link rel="stylesheet" href="css/theme/default.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!-- Twitter Buttons -->
+    <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Cloud.js</h1>
+
+          <div class="authors">
+            <p>Andre Rodrigues</p>
+            <p><small>Software Development Engineer @ Microsoft</small><p>
+            <a href="https://twitter.com/andremrodrigues" class="twitter-follow-button" data-show-count="false" data-size="large">@andremrodrigues</a>
+          </div>
+        </section>
+
+        <section>
+          <p>Slides and code available in:</p>
+
+          <p><a href="www.github.com/andrerod/jingjs">www.github.com/andrerod/jingjs</a></p>
+
+          <aside class="notes">
+            Slides and code available in here.
+          </aside>
+        </section>
+
+        <section>
+          <h2>1941 - Zuse Z3</h2>
+
+          <img class="image" width="800" src="images/zusez3.png" />
+
+          <aside class="notes">
+            Invented in 1941 is considered by many as being the first working programmable, fully working automatic computing machine.
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>1947 – The transistor</h2>
+
+            <img class="image" width="600" src="images/transistor.png" />
+
+            <aside class="notes">
+              Invented in 1947 by a group of 3 engineers at the Bell Labs.
+            </aside>
+          </section>
+          <section>
+            <h2>1947 – The transistor</h2>
+
+            <img class="image" width="600" src="images/inventors.png" />
+
+            <aside class="notes">
+              John Bardeen, William Shockley and Walter Brattain
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2>1953 / 1955 – Manchester University computer</h2>
+
+          <img class="image" width="800" src="images/transistorcomputer.png" />
+          <p>First transistor based computer</p>
+
+          <aside class="notes">
+            The 1953 – prototype - machien had 92 point-contact transistors and 550 diodes manufactored by STC.
+
+            The 1955 – experimental - had 200 point-contact transistors.
+          </aside>
+        </section>
+
+        <section>
+          <h2>1972 - Xerox Parc's Alto</h2>
+
+          <img class="image" width="400" src="images/xerox.png" />
+
+          <aside class="notes">
+            The first computer to use the term Personal Computer. It was the first computer to use the desktop metaphor and mouse-driven graphical user interface (GUI).
+          </aside>
+        </section>
+
+        <section>
+          <h2>1988 - IBM personal computer</h2>
+
+          <img class="image" width="800" src="images/ibm.png" />
+
+          <aside class="notes">
+            The IBM personal computer, launched in 1988 was a key step in the direction of the personal computer vision
+          </aside>
+        </section>
+
+        <section>
+          <h2><b>Modern</b> computer</h2>
+
+          <img class="image" width="600" src="images/modern.png" />
+
+          <aside class="notes">
+            That leads us to the modern computer.
+
+            The moderns computer has X times more processing power than the original computer and X times more storage and it will continue to evolve.
+
+            TODO: talk about the comparison between this and the first computer
+          </aside>
+        </section>
+
+        <section>
+          <h2><b>Multiple</b> devices</h2>
+
+          <img class="image" width="300" src="images/devices1.png" />
+          <img class="image" width="300" src="images/devices2.png" />
+          <img class="image" width="300" src="images/devices5.png" />
+          <img class="image" width="300" src="images/devices4.png" />
+
+          <aside class="notes">
+            And, more than computer, we have all sorts of modern devices.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Backed by the <b>Cloud</b></h2>
+
+          <img class="image" width="600" src="images/cloud.png" />
+
+          <aside class="notes">
+            Backed by some sort of services to provide the data the applications will use.
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>The <b>cloud</b> enables</h2>
+
+            <img class="image" width="600" src="images/userdemand.png" />
+            <p>Grow with your user base</p>
+
+            <aside class="notes">
+              By using the cloud you can adjust to grow in user base
+            </aside>
+          </section>
+
+          <section>
+            <h2>The <b>cloud</b> enables</h2>
+
+            <img class="image" width="600" src="images/spikes.png" />
+            <p>Adjust to user demand</p>
+
+            <aside class="notes">
+              Adjust your application to different spikes in demand
+            </aside>
+          </section>
+
+          <section>
+            <h2>The <b>cloud</b> enables</h2>
+
+            <img class="image" width="600" src="images/timetomarket.png" />
+            <p>Get to the market fast</p>
+
+            <aside class="notes">
+              And get to the market fast
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <h2><b>Multiple</b> devices</h2>
+
+          <img class="image" width="300" src="images/devices1.png" />
+          <img class="image" width="300" src="images/devices2.png" />
+          <img class="image" width="300" src="images/devices5.png" />
+          <img class="image" width="300" src="images/devices4.png" />
+
+          <aside class="notes">
+            And, more than computer, we have all sorts of modern devices.
+          </aside>
+        </section>
+
+        <section>
+          <h2>New ways of <b>interacting</b> with devices</h2>
+
+          <img class="image" width="300" src="images/interacting1.png" />
+          <img class="image" width="300" src="images/interacting2.png" />
+          <img class="image" width="300" src="images/interacting3.png" />
+          <img class="image" width="300" src="images/interacting4.png" />
+
+          <aside class="notes">
+            And, obviously, with these devices, new ways of interacting with them. Not just the typical mouse and keyboard, but voice, touch, gestures, audio input / voice recognition, etc.
+          </aside>
+        </section>
+
+        <section>
+          <img class="image" width="245" src="images/js.png" /><br />
+          <img class="image" width="245" src="images/nodejslogo.png" />
+        </section>
+
+        <section>
+          <h2>Parts of it developed right here in <b>china</b></h2>
+
+          <img class="image" width="300" src="images/yao.png" />
+
+          <aside class="notes">
+            Parts of it developed right here in china.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Other parts developed by <b>Chinese folks</b> all over the world</h2>
+
+          <img class="image" width="300" src="images/guang.png" />
+          <img class="image" width="300" src="images/james.png" />
+
+          <aside class="notes">
+            Parts of it developed right here in china.
+          </aside>
+        </section>
+
+        <section>
+
+          <p>www.windowsazure.cn</p>
+
+          <aside class="notes">
+            Visit us in windowsazure.cn. Available in china.
+          </aside>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+  </body>
+</html>

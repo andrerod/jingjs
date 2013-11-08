@@ -1,0 +1,17 @@
+.clean-list li { list-style: none; }
+
+b { color: #18919c ;}
+
+.gist {
+  background-color: #98cb30;
+  color: #FFFFFF;
+
+  /*set the div in the bottom right corner*/
+  position:absolute;
+  bottom: -40px;
+  right:0;
+}
+
+.gist a {
+  color: #FFFFFF;
+}
